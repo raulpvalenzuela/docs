@@ -1,0 +1,6 @@
+[book]
+authors = ["rpv"]
+language = "en"
+multilingual = false
+src = "src"
+title = "docs"
