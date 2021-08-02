@@ -31,7 +31,7 @@ Themes come in the form of `.vim` files.
 3. Add this line to the `~/.config/nvim/init.vim` file or any sourced file from there:
 
    ```txt
-   colors theme.vim
+   colorscheme theme.vim
    ```
 
 ## Collections of themes
@@ -43,6 +43,38 @@ Themes come in the form of `.vim` files.
 - [https://github.com/chriskempson/base16-vim](https://github.com/chriskempson/base16-vim)
 - [https://github.com/mswift42/vim-themes](https://github.com/mswift42/vim-themes)
 - [https://github.com/mkarmona/colorsbox](https://github.com/mkarmona/colorsbox)
+
+## Plugin manager vim-plug
+
+### Links
+
+- [https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)
+- [https://www.chrisatmachine.com/Neovim/01-vim-plug/](https://www.chrisatmachine.com/Neovim/01-vim-plug/)
+
+Although there is the possibility to manually install plugins in neovim, it is much easier to maintain those plugins with the use of a plugin manager. This way, the plugins themselves do not need to be included in the dotfiles repository, as the plugin manager download them to the configured path on demand.
+
+### vim-plug installation
+
+```bash
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+### vim-plug usage
+
+1. Begin the section with call plug#begin()
+2. List the plugins with Plug commands
+3. End the section with call plug#end()
+4. Reload `/init.vim` and execute `:PlugInstall` to install plugins.
+
+Example:
+
+```vim
+call plug#begin('~/.config/nvim/autoload/plugged')
+
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
+```
 
 ## Usage
 
